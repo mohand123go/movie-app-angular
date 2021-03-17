@@ -1,0 +1,34 @@
+<form #loginForm="ngForm" class="py-5" (ngSubmit)="onSubmitLoginForm(loginForm)">
+    <div class="form-group">
+        <label for="emailInput">Email address</label>
+        <input type="email" ngModel #emailRef="ngModel" required minlength="5" class="form-control" id="emailInput"
+            aria-describedby="emailHelp" name="email"
+            pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+        <div class="alert alert-danger" *ngIf="emailRef.touched && !emailRef.valid">
+            <div *ngIf="emailRef.errors.required" class="">
+                this field is require
+            </div>
+            <div *ngIf="emailRef.errors.pattern" class="">
+                You have entered an invalid email address!
+            </div>
+            <div *ngIf="emailRef.errors.minlength">
+                minum length is {{emailRef.errors.minlength.requiredLength}}
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="passwordInput">Password</label>
+        <input type="password" ngModel #passwordRef="ngModel" name="password" required minlength="8"
+            class="form-control" id="passwordInput">
+        <div class="alert alert-danger" *ngIf="passwordRef.touched && !passwordRef.valid">
+            <div *ngIf="passwordRef.errors.required" class="">
+                this field is require
+            </div>
+            <div *ngIf="passwordRef.errors.minlength">
+                minum length is {{passwordRef.errors.minlength.requiredLength}}
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

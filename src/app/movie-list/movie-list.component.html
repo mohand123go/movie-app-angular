@@ -1,0 +1,15 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Overview</th>
+            <th scope="col">date</th>
+            <th scope="col">stock availabilty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr app-movie-item [movieAttr]=movie *ngFor="let movie of moviesList"></tr>
+
+    </tbody>
+</table>
