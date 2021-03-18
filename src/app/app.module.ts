@@ -10,6 +10,8 @@ import { StockAvailabilityPipe } from './stock-availability.pipe';
 import { AuthComponent } from './auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterReactiveFormComponent } from './register-reactive-form/register-reactive-form.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { RegisterReactiveFormComponent } from './register-reactive-form/register
     NavbarComponent,
     StockAvailabilityPipe,
     AuthComponent,
-    RegisterReactiveFormComponent
+    RegisterReactiveFormComponent,
+    NotFoundComponent,
+    MovieDetailsComponent
   ],
   imports: [
 

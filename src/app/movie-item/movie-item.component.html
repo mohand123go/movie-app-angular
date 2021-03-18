@@ -1,4 +1,8 @@
-<th scope="row"><img width="200" [src]="movieAttr.poster_path" alt=""></th>
+<th scope="row">
+    <img width="200" [src]="movieAttr.poster_path" alt="">
+    <div class="text-center py-3 "><button (click)="goToMovieDetials(movieAttr.id)"
+            class=" w-100 text-capitalize  btn btn-primary">more details</button></div>
+</th>
 
 <td>{{movieAttr.title}}</td>
 <td width="350">{{movieAttr.overview}}</td>
