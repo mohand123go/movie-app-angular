@@ -8,10 +8,11 @@ import { ProductsListService } from '../products-list.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+
   activeId: number;
   productAttr: any;
   constructor(private router: ActivatedRoute, private productListService: ProductsListService) {
-    this.router.params.subscribe(params => this.activeId = params['movieId'])
+    this.router.params.subscribe(params => this.activeId = params['productId'])
   }
 
   ngOnInit(): void {
@@ -29,3 +30,4 @@ export class ProductDetailsComponent implements OnInit {
   }
 
 }
+

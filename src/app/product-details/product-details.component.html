@@ -1,1 +1,11 @@
-<p>product-details works!</p>
+<div class="media py-5 row">
+    <div class="col-md-4 text-md-center text-left">
+        <img [src]="productAttr.image" height="200" class="px-4" alt="...">
+
+    </div>
+    <div class="media-body col-md-8 ">
+        <h5 class="card-title">{{productAttr.name | nameLimit}}</h5>
+        <p class="card-text">{{productAttr.description | seeMore}}</p>
+        <p>{{productAttr.createdAt | date : 'dd/MM/yyyy'}}</p>
+    </div>
+</div>

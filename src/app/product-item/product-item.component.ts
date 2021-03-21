@@ -13,7 +13,7 @@ export class ProductItemComponent implements OnInit {
   goToMovieDetials(id) {
 
 
-    this.router.navigate(['movieDetails', id])
+    this.router.navigate(['productDetails', id])
   }
 
   ngOnInit(): void {
@@ -21,3 +21,4 @@ export class ProductItemComponent implements OnInit {
   }
 
 }
+

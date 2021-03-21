@@ -16,6 +16,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { SeeMorePipe } from './see-more.pipe';
 
 import { NameLimitPipe } from './name-limit.pipe'
+
+
+import { ProductItemComponent } from './product-item/product-item.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +37,11 @@ import { NameLimitPipe } from './name-limit.pipe'
     MovieDetailsComponent,
     SeeMorePipe,
 
-    NameLimitPipe
+    ProductItemComponent,
+    ProductsListComponent
+    ,
+    NameLimitPipe,
+    ProductDetailsComponent
   ],
   imports: [
 
