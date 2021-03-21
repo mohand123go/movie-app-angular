@@ -1,8 +1,15 @@
-<div class="list item">
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 " *ngFor="let product of productsList">
-            <app-movie-item [productAttr]=product> </app-movie-item>
-        </div>
+<table class="table my-5">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Overview</th>
+            <th scope="col">date</th>
+            <th scope="col">stock availabilty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr app-movie-item [movieAttr]=movie *ngFor="let movie of moviesList"></tr>
 
-    </div>
-</div>
+    </tbody>
+</table>

@@ -17,11 +17,13 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    console.log('this.activeId', this.activeId)
     this.productAttr =
 
       this.productListService.getProductItem(this.activeId).subscribe(
+
         (data) => {
+
           this.productAttr = data
 
         }

@@ -1,7 +1,10 @@
 <div class="list item">
     <div class="row">
+
         <div class="col-lg-4 col-md-6 col-12 " *ngFor="let product of productsList">
-            <app-movie-item [productAttr]=product> </app-movie-item>
+
+            <app-product-item [productAttr]=product>
+            </app-product-item>
         </div>
 
     </div>

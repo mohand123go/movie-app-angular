@@ -4,6 +4,6 @@
         <h5 class="card-title">{{productAttr.name | nameLimit}}</h5>
         <p class="card-text">{{productAttr.description | seeMore}}</p>
         <p>{{productAttr.createdAt | date : 'dd/MM/yyyy'}}</p>
-        <button (click)="goToMovieDetials(productAttr.id)" class="btn w-100 btn-primary">view Detials</button>
+        <button (click)="goToProductDetials(productAttr.id)" class="btn w-100 btn-primary">view Detials</button>
     </div>
 </div>

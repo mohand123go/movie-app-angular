@@ -4,8 +4,9 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { AuthComponent } from './auth/auth.component';
 import { RegisterReactiveFormComponent } from './register-reactive-form/register-reactive-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
+
 import { ProductsListComponent } from './products-list/products-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -14,13 +15,11 @@ import { ProductsListComponent } from './products-list/products-list.component';
 const routes: Routes = [
   { path: '', component: ProductsListComponent },
   { path: 'login', component: AuthComponent },
+  { path: 'movieList', component: MovieListComponent },
 
-  { path: 'register', component: RegisterReactiveFormComponent }
-  ,
+  { path: 'register', component: RegisterReactiveFormComponent },
 
-
-  { path: 'movieDetails/:movieId', component: MovieDetailsComponent },
-  { path: 'productDetails/:productId', component: MovieDetailsComponent },
+  { path: 'productDetails/:productId', component: ProductDetailsComponent },
 
 
 

@@ -10,14 +10,14 @@ export class ProductItemComponent implements OnInit {
 
   @Input() productAttr;
   constructor(private router: Router) { }
-  goToMovieDetials(id) {
-
+  goToProductDetials(id) {
+    console.log('iddddddddd', id)
 
     this.router.navigate(['productDetails', id])
   }
 
   ngOnInit(): void {
-    console.log('id', this.productAttr)
+    console.log('productDetails', this.productAttr)
   }
 
 }

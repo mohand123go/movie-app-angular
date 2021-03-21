@@ -1,9 +1,12 @@
-<div class="card m-auto" style="width: 18rem;">
-    <img [src]="productAttr.image" height="200" class="px-4" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{productAttr.name | nameLimit}}</h5>
-        <p class="card-text">{{productAttr.description | seeMore}}</p>
-        <p>{{productAttr.createdAt | date : 'dd/MM/yyyy'}}</p>
-        <button (click)="goToMovieDetials(productAttr.id)" class="btn w-100 btn-primary">view Detials</button>
-    </div>
-</div>
+<th scope="row">
+    <img width="200" [src]="movieAttr.poster_path" alt="">
+
+</th>
+
+<td>{{movieAttr.title}}</td>
+<td width="350">{{movieAttr.overview}}</td>
+<td>{{movieAttr.release_date | date : 'dd/MM/yyyy'}}</td>
+<td
+    [ngClass]="{'text-success': movieAttr.stock_avaliable == true  ,'text-danger' : movieAttr.stock_avaliable == false  }">
+    {{movieAttr.stock_avaliable | stockAvailability }}
+</td>
