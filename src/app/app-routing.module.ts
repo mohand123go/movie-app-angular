@@ -13,7 +13,10 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 const routes: Routes = [
   { path: '', component: MovieListComponent },
   { path: 'login', component: AuthComponent },
-  { path: 'register', component: RegisterReactiveFormComponent },
+
+  { path: 'register', component: RegisterReactiveFormComponent }
+
+  ,
   { path: 'movieDetails/:movieId', component: MovieDetailsComponent },
 
   { path: '**', component: NotFoundComponent }

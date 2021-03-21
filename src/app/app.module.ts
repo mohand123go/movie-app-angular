@@ -12,7 +12,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterReactiveFormComponent } from './register-reactive-form/register-reactive-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SeeMorePipe } from './see-more.pipe';
 
+import { NameLimitPipe } from './name-limit.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +26,18 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     AuthComponent,
     RegisterReactiveFormComponent,
     NotFoundComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    SeeMorePipe,
+
+    NameLimitPipe
   ],
   imports: [
 
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

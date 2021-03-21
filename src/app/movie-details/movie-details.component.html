@@ -1,14 +1,11 @@
 <div class="media py-5 row">
     <div class="col-md-4 text-md-center text-left">
-        <img class="mr-3" style="max-width: 300px;" class="w-100 " [src]="movieAttr.poster_path" alt="">
+        <img [src]="productAttr.image" height="200" class="px-4" alt="...">
 
     </div>
     <div class="media-body col-md-8 ">
-        <h5 class="mt-0">{{movieAttr.title}}</h5>
-        <h6>{{movieAttr.release_date | date : 'dd/MM/yyyy'}} </h6>
-        <p class="">{{movieAttr.overview}}</p>
-        <p
-            [ngClass]="{'text-success': movieAttr.stock_avaliable == true  ,'text-danger' : movieAttr.stock_avaliable == false  }">
-            {{movieAttr.stock_avaliable | stockAvailability }}</p>
+        <h5 class="card-title">{{productAttr.name | nameLimit}}</h5>
+        <p class="card-text">{{productAttr.description | seeMore}}</p>
+        <p>{{productAttr.createdAt | date : 'dd/MM/yyyy'}}</p>
     </div>
 </div>

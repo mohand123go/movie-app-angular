@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from './../movie';
-
-import { ProductsListService } from './../products-list.service';
+import { ProductsListService } from '../products-list.service';
 
 @Component({
-  selector: 'app-movie-list',
-  templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css']
+  selector: 'app-products-list',
+  templateUrl: './products-list.component.html',
+  styleUrls: ['./products-list.component.css']
 })
-export class MovieListComponent implements OnInit {
+export class ProductsListComponent implements OnInit {
+
 
   productsList: any;
   constructor(private productListService: ProductsListService) { }

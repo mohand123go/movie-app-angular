@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProductsListService } from './../products-list.service';
+import { ProductsListService } from '../products-list.service';
 
 @Component({
-  selector: 'app-movie-details',
-  templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html',
+  styleUrls: ['./product-details.component.css']
 })
-export class MovieDetailsComponent implements OnInit {
-
+export class ProductDetailsComponent implements OnInit {
   activeId: number;
   productAttr: any;
   constructor(private router: ActivatedRoute, private productListService: ProductsListService) {
