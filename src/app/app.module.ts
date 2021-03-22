@@ -21,6 +21,7 @@ import { NameLimitPipe } from './name-limit.pipe'
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -40,7 +41,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductsListComponent
     ,
     NameLimitPipe,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
 

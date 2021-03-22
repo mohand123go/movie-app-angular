@@ -3,7 +3,7 @@
         <img [src]="productAttr.image" height="200" class="px-4" alt="...">
 
     </div>
-    <div class="media-body col-md-8 ">
+    <div *ngIf='productAttr.name' class="media-body col-md-8 ">
         <h5 class="card-title">{{productAttr.name | nameLimit }}</h5>
         <p class="card-text">{{productAttr.description | seeMore}}</p>
         <p>{{productAttr.createdAt | date : 'dd/MM/yyyy'}}</p>

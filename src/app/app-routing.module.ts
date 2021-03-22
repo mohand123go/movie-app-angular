@@ -7,6 +7,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
 
   { path: 'productDetails/:productId', component: ProductDetailsComponent },
 
+  { path: 'cart', component: CartComponent },
 
 
   { path: '**', component: NotFoundComponent }
