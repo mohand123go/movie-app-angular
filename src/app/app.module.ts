@@ -22,6 +22,9 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './../store/counter/counter.reducer';
+
 
 
 
@@ -50,7 +53,8 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ counterReducer })
 
   ],
   providers: [],
