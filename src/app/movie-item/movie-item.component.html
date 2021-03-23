@@ -1,12 +1,13 @@
-<th scope="row">
-    <img width="200" [src]="movieAttr.poster_path" alt="">
+<div class="card m-auto " style="width: 18rem;">
+    <img [src]="movieAttr.poster_path" alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{movieAttr.title}}</h5>
+        <p class="card-text">{{movieAttr.overview | seeMore}}</p>
+        <p>{{movieAttr.release_date | date : 'dd/MM/yyyy'}}</p>
+        <p
+            [ngClass]="{'text-success': movieAttr.stock_avaliable == true  ,'text-danger' : movieAttr.stock_avaliable == false  }">
+            {{movieAttr.stock_avaliable | stockAvailability }}</p>
 
-</th>
-
-<td>{{movieAttr.title}}</td>
-<td width="350">{{movieAttr.overview}}</td>
-<td>{{movieAttr.release_date | date : 'dd/MM/yyyy'}}</td>
-<td
-    [ngClass]="{'text-success': movieAttr.stock_avaliable == true  ,'text-danger' : movieAttr.stock_avaliable == false  }">
-    {{movieAttr.stock_avaliable | stockAvailability }}
-</td>
+        <button (click)="AddToFav()" class="btn w-100 btn-success">Add To Favoirt</button>
+    </div>
+</div>

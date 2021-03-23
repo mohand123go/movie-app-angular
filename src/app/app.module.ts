@@ -25,7 +25,8 @@ import { CartComponent } from './cart/cart.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './../store/counter/counter.reducer';
 
-
+import { favoriteMoviesReducer } from './../store/favoriteMovie/favoriteMoives.reducer';
+import { FavoritMoviesComponent } from './favorit-movies/favorit-movies.component'
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { counterReducer } from './../store/counter/counter.reducer';
     ,
     NameLimitPipe,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    FavoritMoviesComponent
   ],
   imports: [
 
@@ -54,7 +56,7 @@ import { counterReducer } from './../store/counter/counter.reducer';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot({ counterReducer })
+    StoreModule.forRoot({ counterReducer, favoriteMoviesReducer })
 
   ],
   providers: [],

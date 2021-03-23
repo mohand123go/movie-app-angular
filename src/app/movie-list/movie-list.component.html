@@ -1,15 +1,21 @@
-<table class="table my-5">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Title</th>
-            <th scope="col">Overview</th>
-            <th scope="col">date</th>
-            <th scope="col">stock availabilty</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr app-movie-item [movieAttr]=movie *ngFor="let movie of moviesList"></tr>
+<div class="list item">
 
-    </tbody>
-</table>
+
+    <div class="row">
+
+        <div class="col-8">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 my-3 " *ngFor="let movie of moviesList">
+                    <app-movie-item [movieAttr]="movie">
+                    </app-movie-item>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <app-favorit-movies></app-favorit-movies>
+        </div>
+
+
+    </div>
+
+</div>

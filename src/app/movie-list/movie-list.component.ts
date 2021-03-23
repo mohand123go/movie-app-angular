@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from './../movie';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-movie-list',
@@ -75,9 +76,15 @@ export class MovieListComponent implements OnInit {
       "stock_avaliable": false
     }
   ]
-  constructor() { }
+  favoriteMoviesList;
+  constructor(private store: Store<{ favoriteMoviesReducer }>) {
+
+    this.store.select('favoriteMoviesReducer').subscribe(data => this.favoriteMoviesList = data)
+  }
 
   ngOnInit(): void {
+
+
   }
 
 }

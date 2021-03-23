@@ -1,0 +1,11 @@
+<h2 class="text-center"> favorite Movies : <span class="bg-warning badge">{{favoriteMoviesList.movieCounter}}</span>
+</h2>
+<div *ngFor="let favoritMovie of  favoriteMoviesList.moviesList">
+
+    <div class="card m-auto " style="width: 18rem;">
+        <img [src]="favoritMovie.poster_path" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{favoritMovie.title}}</h5>
+        </div>
+    </div>
+</div>
